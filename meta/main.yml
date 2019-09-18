@@ -33,7 +33,7 @@ galaxy_info:
     - all
     - 18.04
 
-  galaxy_tags: 
+  galaxy_tags:
     - kubernetes
     - kubeadm
     - kubelet
