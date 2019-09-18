@@ -34,6 +34,7 @@
 
 - name: Put kubeadm package on hold
   shell: >
+         set -o pipefail
          apt-mark showholds | grep -q kubeadm
          && echo -n HOLDED
          || apt-mark hold kubeadm
