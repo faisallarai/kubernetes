@@ -26,6 +26,7 @@
 
 - name: Put kubelet package on hold
   shell: >
+         set -o pipefail
          apt-mark showholds | grep -q kubelet
          && echo -n HOLDED
          || apt-mark hold kubelet
@@ -43,6 +44,7 @@
 
 - name: Put kubectl package on hold
   shell: >
+         set -o pipefail
          apt-mark showholds | grep -q kubectl
          && echo -n HOLDED
          || apt-mark hold kubectl
